@@ -12,6 +12,16 @@
 
     <!-- TODO #3 - Use the same list display from search.html -->
 
+    <table th:each="job : ${jobs}" class="job-listing">
+
+        <tr th:each="jobitem : ${job}" >
+
+            <td th:text="${(jobitem.key)}"/>
+
+            <td th:text="${jobitem.value}"/>
+
+        </tr>
+    </table>
 </div>
 
 </body>
